@@ -1,0 +1,43 @@
+{
+  "name": "detect-external-link",
+  "description": "Node.js plugin that analyzes the given link and determines if the URL is internal or external.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "LICENSE",
+    "index.js",
+    "runkitExample.js",
+    "types/index.d.ts"
+  ],
+  "scripts": {
+    "build": "rm -f index.js && tsc",
+    "lint": "eslint .",
+    "lint:js": "eslint . --ext .js",
+    "lint:ts": "eslint . --ext .ts",
+    "test": "npm run test:link && npm run test:tsd",
+    "test:link": "mocha test/link.js",
+    "test:tsd": "npx tsd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trunkcode/detect-external-link.git"
+  },
+  "keywords": [
+    "external-link"
+  ],
+  "author": "TrunkCode <support@trunkcode.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trunkcode/detect-external-link/issues"
+  },
+  "homepage": "https://github.com/trunkcode/detect-external-link#readme",
+  "runkitExampleFilename": "runkitExample.js",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "6.2.0",
+    "eslint": "8.45.0",
+    "mocha": "10.2.0",
+    "tsd": "0.28.1",
+    "typescript": "5.1.6"
+  }
+}
