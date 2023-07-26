@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 function detectExternalLink(linkToCheck, options) {
     const configHosts = [];
-    const finalConfig = options;
+    const finalConfig = Object.assign({}, options);
     let isExternal = false;
     let linkOrigin = '';
     if (finalConfig.hosts) {
@@ -22,8 +22,10 @@ function detectExternalLink(linkToCheck, options) {
     else if (linkToCheck.indexOf('://') === 0) {
         linkOrigin = new URL('https' + linkToCheck).hostname;
     }
-    if (configHosts.length === 0 || configHosts.indexOf(linkOrigin) === -1) {
-        isExternal = true;
+    if (linkOrigin) {
+        if (configHosts.length === 0 || configHosts.indexOf(linkOrigin) === -1) {
+            isExternal = true;
+        }
     }
     return isExternal;
 }
