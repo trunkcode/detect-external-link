@@ -2,7 +2,7 @@ import * as types from '../types/index.d';
 
 export default function detectExternalLink (linkToCheck: string, options: types.configOptions): boolean {
   const configHosts: Array<string> = [];
-  const finalConfig: types.configOptions = options;
+  const finalConfig: types.configOptions = Object.assign({}, options);
 
   let isExternal = false;
   let linkOrigin = '';
@@ -24,8 +24,10 @@ export default function detectExternalLink (linkToCheck: string, options: types.
     linkOrigin = new URL('https' + linkToCheck).hostname;
   }
 
-  if (configHosts.length === 0 || configHosts.indexOf(linkOrigin) === -1) {
-    isExternal = true;
+  if (linkOrigin) {
+    if (configHosts.length === 0 || configHosts.indexOf(linkOrigin) === -1) {
+      isExternal = true;
+    }
   }
 
   return isExternal;
