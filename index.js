@@ -19,8 +19,8 @@ function detectExternalLink(linkToCheck, options) {
     if (linkToCheck.indexOf('http://') === 0 || linkToCheck.indexOf('https://') === 0) {
         linkOrigin = new URL(linkToCheck).hostname;
     }
-    else if (linkToCheck.indexOf('://') === 0) {
-        linkOrigin = new URL('https' + linkToCheck).hostname;
+    else if (linkToCheck.indexOf('//') === 0) {
+        linkOrigin = new URL('https:' + linkToCheck).hostname;
     }
     if (linkOrigin) {
         if (configHosts.length === 0 || configHosts.indexOf(linkOrigin) === -1) {

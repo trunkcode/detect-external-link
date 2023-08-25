@@ -1,5 +1,11 @@
 # detect-external-link changelog
 
+## 1.0.2 - Aug 25, 2023
+
+### Bug
+
+- Resolve Protocol relative URL issue
+
 ## 1.0.1 - Jul 26, 2023
 
 ### Enhancement

@@ -1,7 +1,7 @@
 {
   "name": "detect-external-link",
   "description": "Node.js plugin that analyzes the given link and determines if the URL is internal or external.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "types": "types/index.d.ts",
   "files": [
@@ -24,6 +24,7 @@
     "url": "https://github.com/trunkcode/detect-external-link.git"
   },
   "keywords": [
+    "detection",
     "external-link"
   ],
   "author": "TrunkCode <support@trunkcode.com>",
