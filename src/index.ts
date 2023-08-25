@@ -20,8 +20,8 @@ export default function detectExternalLink (linkToCheck: string, options: types.
 
   if (linkToCheck.indexOf('http://') === 0 || linkToCheck.indexOf('https://') === 0) {
     linkOrigin = new URL(linkToCheck).hostname;
-  } else if (linkToCheck.indexOf('://') === 0) {
-    linkOrigin = new URL('https' + linkToCheck).hostname;
+  } else if (linkToCheck.indexOf('//') === 0) {
+    linkOrigin = new URL('https:' + linkToCheck).hostname;
   }
 
   if (linkOrigin) {
