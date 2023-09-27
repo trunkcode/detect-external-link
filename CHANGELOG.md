@@ -1,5 +1,11 @@
 # detect-external-link changelog
 
+## 2.0.0 - Sep 27, 2023
+
+### Enhancement
+
+- Include ESM support
+
 ## 1.0.2 - Aug 25, 2023
 
 ### Bug

@@ -21,10 +21,25 @@ Via Yarn
 yarn add detect-external-link
 ```
 
+For vanilla HTML in modern browsers, import `detect-external-link` from jsDelivr:
+
+```html
+<script type="module">
+
+import detectExternalLink from "https://cdn.jsdelivr.net/npm/detect-external-link@2/dist/esm/index.js";
+
+console.log(detectExternalLink('http://test.example2.com/test/abc/', {
+  'hosts': [
+    'http://example.com',
+    'http://test.example.com'
+  ]
+}));
+</script>
+```
 ## Usage
 
 ```javascript
-const detectExternalLink = require('detect-external-link').default;
+import detectExternalLink from '/js/index.js';
 
 const link = 'http://test.example2.com/test/abc/';
 const linkOptions = {
