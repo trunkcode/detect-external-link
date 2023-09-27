@@ -1,7 +1,7 @@
 'use strict';
 
 const assert = require('assert');
-const detectExternalLink = require('../index').default;
+const detectExternalLink = require('../dist/cjs/index.js').default;
 
 describe('Test `relative` links', () => {
   it('single domain', () => {
