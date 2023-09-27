@@ -1,5 +1,11 @@
 # detect-external-link changelog
 
+## 2.0.1 - Sep 27, 2023
+
+### Bug
+
+- Add missing files
+
 ## 2.0.0 - Sep 27, 2023
 
 ### Enhancement

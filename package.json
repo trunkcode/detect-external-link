@@ -18,7 +18,7 @@
     "runkitExample.js"
   ],
   "scripts": {
-    "build": "rm -rf dist/* && tsc -p tsconfig-esm.json && tsc -p tsconfig-cjs.json",
+    "build": "rm -rf dist/* && tsc -p tsconfig-esm.json && tsc -p tsconfig-cjs.json && bash fixup",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "test": "npm run test:link && npm run test:tsd",
