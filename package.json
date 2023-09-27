@@ -1,7 +1,7 @@
 {
   "name": "detect-external-link",
   "description": "Node.js plugin that analyzes the given link and determines if the URL is internal or external.",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "exports": {
     ".": {
       "import": "./dist/esm/index.js",
